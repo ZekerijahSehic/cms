@@ -19,4 +19,4 @@ Route::get('/', [\App\Http\Controllers\PostController::class, 'allPosts']);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/posts/{post}', [\App\Http\Controllers\PostController::class, 'showPost']);
 
-Route::apiResource('posts', 'PostController')
+Route::apiResource('posts', 'PostController');
