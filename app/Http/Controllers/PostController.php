@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
 
-    public function all()
+    public function allPosts()
     {
         return view('landing', [
             'posts' => Post::latest()->paginate(5)
