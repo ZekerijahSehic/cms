@@ -15,6 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', 'PostContorller@all');
+Route::get('/', [\App\Http\Controllers\PostController::class, 'allPosts']);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/posts/{post}', 'PostController@single');
+Route::get('/posts/{post}', [\App\Http\Controllers\PostController::class, 'showPost']);
